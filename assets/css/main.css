@@ -82,12 +82,13 @@ nav #btn-mobile {
 }
 
 nav .nav-list {
+  background: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   height: calc(100vh - 100px);
-  background: #ddd;
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-  background: #eee;
   position: absolute;
   top: 100%;
   left: -100%;
@@ -137,7 +138,7 @@ nav .nav-list .primaryitem a {
 
 @media (min-width: 760px) {
   nav .nav-list .primaryitem a:hover {
-    background-color: #bbb;
+    background-color: #f0f0f0;
   }
 }
 
@@ -147,7 +148,7 @@ nav .nav-list .primaryitem a:active {
 
 nav .nav-list .primaryitem ul {
   display: none;
-  background: #fff;
+  background: #fafafa;
   list-style: none;
 }
 

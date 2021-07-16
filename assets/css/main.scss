@@ -76,10 +76,10 @@ nav {
   }
 
   .nav-list {
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     height: calc(100vh - 100px);
-    background: #ddd;
     order: 3;
-    background: $cor2;
     position: absolute;
     top: 100%;
     left: -100%;
@@ -113,8 +113,8 @@ nav {
 
       @media (min-width: $breakpoint-tablet) {
         &:hover {
-          background-color:#bbb;
-        }  
+          background-color: #f0f0f0;
+        }
       }
       
       &:active {
@@ -124,7 +124,7 @@ nav {
 
     .primaryitem ul{
       display: none;
-      background: #fff;
+      background: #fafafa;
       list-style: none;
       //display: flex;
        //height: 100%;
