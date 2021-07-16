@@ -136,8 +136,10 @@ nav .nav-list .primaryitem a {
   text-decoration: none;
 }
 
-nav .nav-list .primaryitem a:hover {
-  background-color: #bbb;
+@media (min-width: 760px) {
+  nav .nav-list .primaryitem a:hover {
+    background-color: #bbb;
+  }
 }
 
 nav .nav-list .primaryitem a:active {

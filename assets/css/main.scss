@@ -112,10 +112,12 @@ nav {
       font-size: $font-p;
       text-decoration: none;
 
-      &:hover {
-        background-color:#bbb;
+      @media (min-width: $breakpoint-tablet) {
+        &:hover {
+          background-color:#bbb;
+        }  
       }
-
+      
       &:active {
         background: #ccc;
       }
