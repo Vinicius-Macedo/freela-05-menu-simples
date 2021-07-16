@@ -1,0 +1,153 @@
+$azul: #191c2d;
+$roxo: #6089ff;
+$cinza: #f1f1e6;
+$amarelo: #fff7d6;
+$branco: #fff;
+$font-h: 30px;
+$font-p: 18px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: $azul;
+}
+
+// ESTILOS GERAIS
+#overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+// POR SEÇÃO AGORA
+
+nav {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100px;
+  justify-content: space-around;
+  align-items: center;
+  background: $azul;
+  border-bottom: 1px solid $roxo;
+
+  .logo img {
+    order: 1;
+    width: 45px;
+  }
+
+  .fale-comigo {
+    order: 2;
+    text-decoration: none;
+    color: $cinza;
+    font-size: $font-p;
+    border: 2px solid $cinza;
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+
+  #btn-mobile {
+    cursor: pointer;
+    padding-bottom: 6px; //DEIXAR NA ALTURA CORRETA POR CAUSA DO AFTER E BEFORE
+    order: 3;
+  }
+
+  .nav-list {
+    order: 4;
+    background: $azul;
+    position: absolute;
+    top: 100%;
+    height: 0px;
+    width: 100%;
+    border-bottom: 1px solid $roxo;
+    visibility: hidden;
+    overflow-y: hidden;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    order: 3;
+    list-style: none;
+    transition: .6s;
+  }
+
+  &.active .nav-list {
+    height: 69vh;
+    display: block;
+    visibility: visible;
+  }
+
+  .nav-list li {
+    height: 23vh;
+    text-align: center;
+  }
+
+  .nav-list li a {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-p;
+    color: $cinza;
+    text-decoration: none;
+  }
+
+  .bars {
+    background: $cinza;
+    display: inline-block;
+    height: 3px;
+    position: relative;
+    width: 35px;
+    transition: .5s;
+  }
+
+  &.active .bars {
+    background: transparent;
+  }
+
+  .bars::before, .bars::after {
+    transition: .3s;
+    content: '';
+    background: $cinza;
+    display: inline-block;
+    height: 3px;
+    position: absolute;
+    width: 35px;
+  }
+
+  .bars::before {
+    top: -10px;
+  }
+
+  .bars::after {
+  top: 10px;
+  }
+
+  &.active .bars::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &.active .bars::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  &.active body {
+    background: #6089ff;
+  }
+
+}

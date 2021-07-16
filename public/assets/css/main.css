@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: #191c2d;
+}
+
+#overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+nav {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #191c2d;
+  border-bottom: 1px solid #6089ff;
+}
+
+nav .logo img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 45px;
+}
+
+nav .fale-comigo {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  text-decoration: none;
+  color: #f1f1e6;
+  font-size: 18px;
+  border: 2px solid #f1f1e6;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+nav #btn-mobile {
+  cursor: pointer;
+  padding-bottom: 6px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+nav .nav-list {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  background: #191c2d;
+  position: absolute;
+  top: 100%;
+  height: 0px;
+  width: 100%;
+  border-bottom: 1px solid #6089ff;
+  visibility: hidden;
+  overflow-y: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  list-style: none;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+nav.active .nav-list {
+  height: 69vh;
+  display: block;
+  visibility: visible;
+}
+
+nav .nav-list li {
+  height: 23vh;
+  text-align: center;
+}
+
+nav .nav-list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+  color: #f1f1e6;
+  text-decoration: none;
+}
+
+nav .bars {
+  background: #f1f1e6;
+  display: inline-block;
+  height: 3px;
+  position: relative;
+  width: 35px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+nav.active .bars {
+  background: transparent;
+}
+
+nav .bars::before, nav .bars::after {
+  -webkit-transition: .3s;
+  transition: .3s;
+  content: '';
+  background: #f1f1e6;
+  display: inline-block;
+  height: 3px;
+  position: absolute;
+  width: 35px;
+}
+
+nav .bars::before {
+  top: -10px;
+}
+
+nav .bars::after {
+  top: 10px;
+}
+
+nav.active .bars::before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+nav.active .bars::after {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+nav.active body {
+  background: #6089ff;
+}
+/*# sourceMappingURL=main.css.map */
