@@ -17,7 +17,7 @@
 }
 
 .open {
-  margin-left: 29px;
+  margin-left: 30px;
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
   position: relative;
@@ -115,7 +115,7 @@ nav .nav-list {
 
 nav .nav-list .primaryitem a {
   margin-right: 30px;
-  text-indent: 20px;
+  text-indent: 30px;
   cursor: pointer;
   gap: 30px;
   display: -webkit-box;
