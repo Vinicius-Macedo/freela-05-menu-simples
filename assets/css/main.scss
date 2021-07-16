@@ -30,17 +30,17 @@ $breakpoint-tablet: 760px;
   margin-left: 29px;
   transform: rotate(20deg);
   position: relative;
-  width: 15px;
+  width: 10px;
   height: 2px;
   background: $cor3;
 
   &::before {
     transform: rotate(-40deg);
-    top: -5px;
-    left: 13px;
+    top: -3px;
+    left: 9px;
     position: absolute;
     content: '';
-    width: 15px;
+    width: 10px;
     height: 2px;
     background: $cor3;
   }

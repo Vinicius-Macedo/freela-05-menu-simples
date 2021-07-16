@@ -21,7 +21,7 @@
   -webkit-transform: rotate(20deg);
           transform: rotate(20deg);
   position: relative;
-  width: 15px;
+  width: 10px;
   height: 2px;
   background: #222;
 }
@@ -29,11 +29,11 @@
 .open::before {
   -webkit-transform: rotate(-40deg);
           transform: rotate(-40deg);
-  top: -5px;
-  left: 13px;
+  top: -3px;
+  left: 9px;
   position: absolute;
   content: '';
-  width: 15px;
+  width: 10px;
   height: 2px;
   background: #222;
 }
