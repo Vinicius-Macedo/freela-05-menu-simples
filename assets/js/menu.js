@@ -51,9 +51,13 @@ liitems.forEach(li => {
     if (li.nextElementSibling && li.nextElementSibling.constructor.name == "HTMLUListElement") {
       if (li.nextElementSibling.style.display == "block") {
         li.nextElementSibling.style.display = "none";
+        li.nextElementSibling.setAttribute('aria-label', '"Abrir subitens da categoria"')
+        li.nextElementSibling.setAttribute('aria-expanded', 'false')
       }
       else {
         li.nextElementSibling.style.display = "block";
+        li.nextElementSibling.setAttribute('aria-label', '"Fechar subitens da categoria"')
+        li.nextElementSibling.setAttribute('aria-expanded', 'true')
       }
     }
 
