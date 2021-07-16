@@ -1,10 +1,11 @@
-$azul: #191c2d;
-$roxo: #6089ff;
-$cinza: #f1f1e6;
+$cor1: #eee;
+$cor2: #eee;
+$cor3: #222;
 $amarelo: #fff7d6;
 $branco: #fff;
 $font-h: 30px;
-$font-p: 18px;
+$font-p: 16px;
+$breakpoint-tablet: 760px;
 
 * {
   margin: 0;
@@ -13,11 +14,8 @@ $font-p: 18px;
   font-family: 'Raleway', sans-serif;
 }
 
-body {
-  background-color: $azul;
-}
 
-// ESTILOS GERAIS
+// DIV QUE PREENCHE A TELA TODA PARA ESCURECER A TELA QUANDO ABRIR O MENU
 #overlay {
   visibility: hidden;
   position: fixed;
@@ -26,88 +24,131 @@ body {
   height: 100vh;
   width: 100vw;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
 }
 
-// POR SEÇÃO AGORA
+.open {
+  margin-left: 29px;
+  transform: rotate(20deg);
+  position: relative;
+  width: 15px;
+  height: 2px;
+  background: $cor3;
+
+  &::before {
+    transform: rotate(-40deg);
+    top: -5px;
+    left: 13px;
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: $cor3;
+  }
+}
 
 nav {
   z-index: 3;
   position: fixed;
   top: 0;
-  font-weight: 700;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 100px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background: $azul;
-  border-bottom: 1px solid $roxo;
+  background: $cor1;
 
   .logo img {
-    order: 1;
+    margin: 0 20px;
+    order: 2;
     width: 45px;
   }
 
-  .fale-comigo {
-    order: 2;
-    text-decoration: none;
-    color: $cinza;
-    font-size: $font-p;
-    border: 2px solid $cinza;
-    padding: 10px 20px;
-    border-radius: 30px;
-  }
-
   #btn-mobile {
+    padding: 15px 10px;
+    margin: 0 20px;
     cursor: pointer;
-    padding-bottom: 6px; //DEIXAR NA ALTURA CORRETA POR CAUSA DO AFTER E BEFORE
-    order: 3;
+    order: 1;
+
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
   }
 
   .nav-list {
-    order: 4;
-    background: $azul;
+    height: calc(100vh - 100px);
+    background: #ddd;
+    order: 3;
+    background: $cor2;
     position: absolute;
     top: 100%;
-    height: 0px;
-    width: 100%;
-    border-bottom: 1px solid $roxo;
-    visibility: hidden;
-    overflow-y: hidden;
+    left: -100%;
+    width: auto;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     order: 3;
     list-style: none;
     transition: .6s;
+
+    @media (min-width: $breakpoint-tablet) {
+      left: 0;
+    }
+
+    .primaryitem  a{
+      margin-right: 30px;
+      text-indent: 30px;
+      cursor: pointer;
+      gap: 30px;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      line-height: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      width: 100%;
+      font-size: $font-p;
+      text-decoration: none;
+
+      &:hover {
+        background-color:#bbb;
+      }
+
+      &:active {
+        background: #ccc;
+      }
+    }
+
+    .primaryitem ul{
+      display: none;
+      background: #fff;
+      list-style: none;
+      //display: flex;
+       //height: 100%;
+       //justify-content: left;
+       //align-items: center;
+
+      li a {
+        font-weight: 400;
+        text-indent: 45px;
+        font-size: 16px;
+      }
+    }
+
   }
 
   &.active .nav-list {
-    height: 69vh;
+    left: 0;
+    height: calc(100vh - 100px);
     display: block;
-    visibility: visible;
-  }
-
-  .nav-list li {
-    height: 23vh;
-    text-align: center;
-  }
-
-  .nav-list li a {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    font-size: $font-p;
-    color: $cinza;
-    text-decoration: none;
+    overflow-y: auto;
   }
 
   .bars {
-    background: $cinza;
-    display: inline-block;
+    background: $cor3;
+    display: block;
     height: 3px;
     position: relative;
     width: 35px;
@@ -121,7 +162,7 @@ nav {
   .bars::before, .bars::after {
     transition: .3s;
     content: '';
-    background: $cinza;
+    background: $cor3;
     display: inline-block;
     height: 3px;
     position: absolute;
@@ -145,9 +186,5 @@ nav {
     top: 0;
     transform: rotate(-135deg);
   }
-
-  &.active body {
-    background: #6089ff;
-  }
-
+  
 }
