@@ -26,25 +26,7 @@ $breakpoint-tablet: 760px;
   background: rgba(0, 0, 0, 0.3);
 }
 
-.open {
-  margin-left: 30px;
-  transform: rotate(20deg);
-  position: relative;
-  width: 10px;
-  height: 2px;
-  background: $cor3;
 
-  &::before {
-    transform: rotate(-40deg);
-    top: -3px;
-    left: 9px;
-    position: absolute;
-    content: '';
-    width: 10px;
-    height: 2px;
-    background: $cor3;
-  }
-}
 
 nav {
   z-index: 3;
@@ -97,9 +79,9 @@ nav {
 
     .primaryitem  a{
       margin-right: 30px;
-      text-indent: 30px;
+      text-indent: 20px;
       cursor: pointer;
-      gap: 30px;
+      gap: 10px;
       display: flex;
       align-items: center;
       font-weight: 700;

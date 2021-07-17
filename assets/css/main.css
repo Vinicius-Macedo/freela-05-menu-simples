@@ -16,28 +16,6 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
-.open {
-  margin-left: 30px;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
-  position: relative;
-  width: 10px;
-  height: 2px;
-  background: #222;
-}
-
-.open::before {
-  -webkit-transform: rotate(-40deg);
-          transform: rotate(-40deg);
-  top: -3px;
-  left: 9px;
-  position: absolute;
-  content: '';
-  width: 10px;
-  height: 2px;
-  background: #222;
-}
-
 nav {
   z-index: 3;
   position: fixed;
@@ -116,9 +94,9 @@ nav .nav-list {
 
 nav .nav-list .primaryitem a {
   margin-right: 30px;
-  text-indent: 30px;
+  text-indent: 20px;
   cursor: pointer;
-  gap: 30px;
+  gap: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
