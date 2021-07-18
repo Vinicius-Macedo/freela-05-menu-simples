@@ -93,6 +93,10 @@ nav {
       font-size: $font-p;
       text-decoration: none;
 
+      i {
+        padding-bottom: 10px; //Font Awesome bug "Icone veio com padding top o que atrapalha o alinhamento"
+      }
+
       @media (min-width: $breakpoint-tablet) {
         &:hover {
           background-color: #f0f0f0;
