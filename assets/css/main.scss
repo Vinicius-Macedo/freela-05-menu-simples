@@ -26,6 +26,19 @@ $breakpoint-tablet: 760px;
   background: rgba(0, 0, 0, 0.3);
 }
 
+main {
+  margin-top: 100px;
+  @media (min-width: $breakpoint-tablet) {
+    margin-left: 210px;
+  }
+}
+
+footer {
+  @media (min-width: $breakpoint-tablet) {
+    margin-left: 210px;
+  }
+}
+
 
 
 nav {
@@ -40,6 +53,9 @@ nav {
   align-items: center;
   background: $cor1;
 
+  /*@media (min-width: $breakpoint-tablet) {
+    position: absolute;
+  }*/
   .logo img {
     margin: 0 20px;
     order: 2;
