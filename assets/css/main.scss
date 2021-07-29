@@ -29,13 +29,13 @@ $breakpoint-tablet: 760px;
 main {
   margin-top: 100px;
   @media (min-width: $breakpoint-tablet) {
-    margin-left: 210px;
+    margin-left: 265px;
   }
 }
 
 footer {
   @media (min-width: $breakpoint-tablet) {
-    margin-left: 210px;
+    margin-left: 260px;
   }
 }
 
